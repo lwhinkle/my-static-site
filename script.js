@@ -33,6 +33,10 @@ function displayResults() {
 
         if(userAnswer == current.correct) {
             correctAnswers++;
+            answerContainers[num].style.color = 'black';
+        }
+        else {
+            answerContainers[num].style.color = 'red';
         }
     } 
     );
@@ -45,20 +49,38 @@ const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 const quizQuestions = [
     {
-        question: "Question 1",
+        question: "What should go in the tags <_> to make a paragraph?",
         answers: {
-            a: '1',
-            b: '2',
-            c: '3'
+            a: 'p',
+            b: 'body',
+            c: 'h1'
+        },
+        correct: 'a'
+    },
+    {
+        question: "How would you change the type of font with CSS?",
+        answers: {
+            a: 'font-size',
+            b: 'font-family',
+            c: 'font-weight'
+        },
+        correct: 'b'
+    },
+    {
+        question: "What language is used to make interactive content on websites?",
+        answers: {
+            a: 'Java',
+            b: 'C',
+            c: 'JavaScript'
         },
         correct: 'c'
     },
     {
-        question: "Question 2",
+        question: "When linking a CSS file to an HTML file, where should it be placed in the HTML?",
         answers: {
-            a: '1',
-            b: '2',
-            c: '3'
+            a: 'body',
+            b: 'head',
+            c: 'outside of body and head'
         },
         correct: 'b'
     }
